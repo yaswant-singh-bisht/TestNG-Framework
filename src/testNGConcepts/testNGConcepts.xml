@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNG Concepts Learning Suite">
+	<test thread-count="5" name="TestNG_Concepts">
+		<classes>
+			<class name="testNGConcepts.BasicTest" />
+			<class name="testNGConcepts.AssertTest" />
+			<class name="testNGConcepts.ExceptionTest" />
+			<class name="testNGConcepts.ExceptionTimeOutTest" />
+			<class name="testNGConcepts.TestNGFeatureTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	
+</suite> <!-- TestNG Concepts Learning Suite -->
