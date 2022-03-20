@@ -3,7 +3,6 @@
 <suite name="TestNG Concepts Learning Suite">
 	<test thread-count="5" name="TestNG_Concepts">
 		<classes>
-			<class name="testNGConcepts.BasicTest" />
 			<class name="testNGConcepts.AssertTest" />
 			<class name="testNGConcepts.ExceptionTest" />
 			<class name="testNGConcepts.ExceptionTimeOutTest" />

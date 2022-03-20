@@ -15,12 +15,12 @@ public class BasicTest {
 	//		System.out.println("Before Suite");
 	//	}
 
-	@BeforeClass
+	@BeforeClass (alwaysRun=true) //alwaysRun has to be there in order to run using groups
 	public void beforeClass() {
 		System.out.println("Before Class");
 	}
 
-	@BeforeMethod
+	@BeforeMethod (alwaysRun=true)
 	public void setup() {
 		System.out.println("Before Method");
 		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
@@ -32,7 +32,7 @@ public class BasicTest {
 		driver.get("http://www.google.com");
 	}
 
-	@Test (priority = 1, groups="Regression")
+	@Test (priority = 1, groups="regression")
 	public void googleTitleTest() {
 		System.out.println("googleTitleTest");
 		String title = driver.getTitle();
@@ -40,7 +40,7 @@ public class BasicTest {
 
 	}
 
-	@Test (priority = 2, groups="Smoke")
+	@Test (priority = 2, groups="smoke")
 	public void googleLogo() {
 		System.out.println("googleLogo");
 		Boolean logoVis = driver.findElement(By.xpath("//*[@class='lnXdpd']")).isDisplayed();
@@ -53,19 +53,19 @@ public class BasicTest {
 
 	}	
 
-	@Test (priority = 3, groups = {"Regression","Smoke"})
+	@Test (priority = 3, groups = {"regression", "smoke"})
 	public void googleLinkText() {
 		System.out.println("googleLinkText");
 		driver.findElement(By.partialLinkText("mail"));
 	}
 
-	@AfterMethod
+	@AfterMethod (alwaysRun=true)
 	public void tearDown() {
 		System.out.println("After Method");
 		driver.quit();
 	}
 
-	@AfterClass
+	@AfterClass (alwaysRun=true)
 	public void afterClass() {
 		System.out.println("After Class");
 	}

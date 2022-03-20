@@ -5,8 +5,7 @@ import org.testng.SkipException;
 //import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-//@Listeners(testNGBase.Listener.class) 
-// This is not required while running the rest from "testNGListeners.xml"
+//@Listeners(testNGBase.Listener.class) // This is not required while running the rest from "testNGListeners.xml"
 public class ListenerTest {
 
 	@Test

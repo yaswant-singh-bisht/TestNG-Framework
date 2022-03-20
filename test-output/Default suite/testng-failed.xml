@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGConcepts.DataProviderExcelTest">
+      <class name="testNGConcepts.BasicTest">
         <methods>
-          <include name="registerUser"/>
+          <include name="tearDown"/>
+          <include name="googleLogo"/>
+          <include name="setup"/>
+          <include name="afterClass"/>
+          <include name="googleLinkText"/>
+          <include name="googleTitleTest"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- testNGConcepts.DataProviderExcelTest -->
+      </class> <!-- testNGConcepts.BasicTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
